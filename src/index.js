@@ -8,8 +8,8 @@ const port = process.env.PORT || 3000
 const htmlDir = path.join(__dirname, '../public') 
 
 app.use(express.json()) 
-app.use(reportRouter)
 app.use(express.static(htmlDir))
+app.use(reportRouter)
 
 
 
