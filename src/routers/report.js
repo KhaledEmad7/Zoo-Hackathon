@@ -7,11 +7,12 @@ router.post('/reports', async (req, res) => {
     const report = new Report(req.body) 
 
     try{
-        await Report.save();
+        await report.save();
 
         res.status(201).send(report) 
 
     } catch(e){
+        console.log(req.body);
         res.status(400).send(e) 
     }
 })

@@ -3,24 +3,21 @@ const mongoose = require('mongoose')
 
 const Report = mongoose.model('Report', {
     animal: {
-            type: String,
-            required: true
-        },
+        type: String,
+        required: true
+    },
    product: {
-           type: String,
-           deafult: "Unknown"
-       },
+        type: String
+   },
    sellerName: {
-       type: String,
-       default: "Unknown"
+       type: String
    },
    sellerAddress: {
        type: String,
        required: true
    },
    description: {
-       type: String,
-       default: "No description"
+       type: String
    }
 })
 
