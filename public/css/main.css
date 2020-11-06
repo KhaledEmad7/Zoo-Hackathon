@@ -1,0 +1,562 @@
+/*----------------------------------------general----------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                 Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.debug-div-dimensions{
+    border: 2px solid green;
+    padding: 2px;
+}
+hr{
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to left, rgba(256,256,256,0), rgba(256,256,256,.75), rgba(256,256,256,0));
+}
+body{
+    background-color: black;
+}
+/*----------------------------------------nav----------------------------------------*/
+nav{
+    display: flex;
+    height: 0;
+    position: relative;
+    z-index: 2;
+}
+nav #nav-logo{
+    flex: 50%;
+    margin-top: 15px;
+    padding-left: 4%;
+}
+nav #nav-list{
+    flex: 50%;
+    margin-top: 30px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 1.5%;
+}
+nav li a{
+    text-decoration: none;
+    color:#FFF;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0px;
+    height: 2px;
+    width: 0;
+    /*background-color: #572F59;*/
+    background-color: #35ad5d;
+    transition: all 0.5s ease-in-out;
+}
+nav ul li a:hover::after{
+    width: 80%;
+}
+/*----------------------------------------header----------------------------------------*/
+header{
+    background: url('../imgs/Cover.jpg') no-repeat center;
+    //background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 700px;
+    position: relative;
+    text-align: center;
+}
+header #header-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,transparent 0%, rgba(0,0,0,1) 100%);
+}
+header #header-info{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+header #header-info h1{
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 400;
+}
+header #header-info h4{
+    color: #3cc66b;
+    font-size: 16.5px;
+    font-weight: 500;
+    padding: 10px 0 85px;
+}
+header #header-info input{
+    width: 49%;
+    height: 40px;
+    border: none;
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+    padding: 22px 1.5%;
+    outline: none;
+}
+header #header-info button{
+    color: #FFF;
+    background-color: #3cc66b;
+    /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+    width: 7.5%;
+    height: 45px;
+    border: none;
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+header #header-info button:hover{
+    background-color: #267c43;
+}
+header svg{
+   position: absolute;
+    top: 550px;
+    left: 0;
+}
+/*----------------------------------------offers----------------------------------------*/
+#offers{
+    margin: 0 auto;
+    background-color: #eee;
+}
+#offers h1{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+#offers h4{
+    color: #bbb;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+#offers #offers-info{
+    padding-top: 50px;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+}
+#offers #offers-info .offer{
+    flex: 0 0 23.5%;
+    max-width: 23.5%;
+    background-color: #FFF;
+    border-radius: 5%;
+    overflow: hidden;
+    cursor: pointer;
+}
+#offers #offers-info .offer img{
+    width: 100%;
+    box-shadow: 0px 2px 6px #777;
+}
+#offers #offers-info .offer .offer-info{
+    padding: 15px 10%;
+}
+#offers #offers-info .offer .offer-info h3{
+    padding-bottom: 12.5px;
+}
+#offers #offers-info .offer .offer-info p{
+    color: #aaaaaa;
+    font-size: 12px;
+    font-weight: 500;
+}
+#offers button{
+    display: block;
+    margin: 40px auto 0;
+    color: #FFF;
+    background-color: #3cc66b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .9% 2.25%;
+    border-radius: 25px;
+    font-weight: 500;
+}
+#offers button:hover{
+    background-color: #267c43;
+}
+#offers #offers-space{
+    height: 80px;
+}
+/*----------------------------------------travellino----------------------------------------*/
+#travellino{
+    /*background: url('../imgs/travellino.jpg') no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 600px;*/
+    text-align: center;
+}
+#travellino h1{
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 400;
+    padding-top: 50px;
+}
+#travellino #travellino-items{
+    display: flex;
+    margin: 10px auto 50px;
+    width: 92.5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#travellino #travellino-items .item{
+   /* background-color: #fff;*/
+    width: 32%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+#travellino #travellino-items .item .icon{
+    background-color: #3cc66b;
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    margin: 15px auto 0;
+    position: relative;
+    cursor: pointer;
+}
+#travellino #travellino-items .item .icon:hover{
+    background-color: #267c43;
+}
+#travellino #travellino-items .item .icon i{
+    position: absolute;
+    color: #fff;
+    font-size: 28px;
+    top: 50%;
+    right: 50%;
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+#travellino #travellino-items .item h3{
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFF;
+}
+#travellino #travellino-items .item p{
+    margin:0 auto 25px;
+    width: 75%;
+    color: #aaaaaa;
+}
+#travellino #travellino-items .item p span{
+    font-size:150%;
+}
+
+#travellino button{
+    color: #FFF;
+    background-color: #3cc66b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .75% 1.75%;
+    border-radius: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+#travellino button:hover{
+    background-color: #267c43;
+}
+/*----------------------------------------blogs----------------------------------------*/
+#blogs{
+    margin: 60px auto;
+    width: 80%;
+    text-align: center;
+}
+#blogs h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #2d9450;
+}
+#blogs #blogs-box{
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+#blogs #blogs-box .blog{
+    width: 30%;
+    cursor: pointer;
+    padding: 1%;
+    transition: all .3s;
+}
+#blogs #blogs-box .blog:hover{
+    box-shadow: 0px 0px 20px rgba(45,148,80,.75);
+}
+#blogs #blogs-box .blog img{
+    width: 100%;
+}
+#blogs #blogs-box .blog p{
+    color: #aaa;
+    margin: 20px 0;
+    font-size: 13px;
+}
+#blogs #blogs-box .blog h3{
+    color: #2d9450;
+}
+#blogs #blogs-box .blog p i{
+    color: #3cc66b;
+}
+#blogs #blogs-box .blog button{
+    color: #FFf;
+    background-color: #3cc66b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 3% 6%;
+    border-radius: 25px;
+    font-weight: 500;
+}
+#blogs #blogs-box .blog button:hover{
+    background-color: #267c43;
+}
+/*----------------------------------------back-1----------------------------------------*/
+#back-1{
+    min-height: 550px;
+    background: url('../imgs/back-2.jpg') no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+}
+#back-1 #back-1-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#back-1 #back-1-content{
+    position: absolute;
+    top: 39%;
+    left: 7%;
+}
+#back-1 #back-1-content h1{
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 400;
+}
+#back-1 #back-1-content button{
+    margin-top: 50px;
+    color: #FFF;
+    background-color: #3cc66b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.75% 5%;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#back-1 #back-1-content button:hover{
+    background-color: #267c43;
+}
+/*----------------------------------------counter----------------------------------------*/
+#counter{
+    margin: 90px auto;
+    width: 80%;
+}
+#counter #counter-box{
+    display: flex;
+}
+#counter #counter-box .counter-item{
+    width: 25%;
+    text-align: center;
+}
+#counter #counter-box .counter-item p{
+    font-size: 35px;
+    font-weight: 500;
+}
+#counter #counter-box .counter-item span{
+    color: #aaa;
+    font-style: italic;
+}
+/*----------------------------------------back-2----------------------------------------*/
+#back-2{
+    direction: rtl;
+    min-height: 550px;
+    background: url('../imgs/report.jpg') no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+}
+#back-2 #back-2-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#back-2 #back-2-content{
+    position: absolute;
+    top: 35%;
+    right: 3%;
+    z-index: 2;
+}
+#back-2 #back-2-content h1{
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 400;
+}
+#back-2 #back-2-content button{
+    margin-top: 50px;
+    color: #FFF;
+    background-color: #3cc66b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.75% 4%;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#back-2 #back-2-content button:hover{
+    background-color: #267c43;
+}
+/*----------------------------------------test----------------------------------------*/
+#test{
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+#test h1{
+    font-size: 35px;
+    font-weight: 500; 
+    color: #FFF;
+}
+#test p{
+    color: #aaa;
+    margin: 15px 0 50px;
+}
+#test #test-box{
+    display: flex;
+    justify-content: space-between;
+}
+#test #test-box .test-item{
+    width: 22.5%;
+}
+#test #test-box .test-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#test #test-box .test-item h3{
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-size: 15px;
+    color:#3cc66b;
+}
+#test button{
+    color: #FFF;
+    background-color: #3cc66b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.25% 2.5%;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#test button:hover{
+    background-color: #267c43;
+}
+/*----------------------------------------contact----------------------------------------*/
+#contact{
+    width: 90%;
+    margin: 75px auto;
+}
+#contact #contact-box{
+    display: flex;
+    justify-content: space-between;
+}
+#contact #contact-box div{
+    width: 25%
+}
+#contact #contact-box #contact-1 p{
+    color: #aaa;
+    font-size: 12.5px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+#contact #contact-box h3{
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+#contact #contact-box #contact-2 ul{
+    list-style: none;
+}
+#contact #contact-box #contact-2 ul li{
+    color: #aaa;
+    display: flex;
+    margin-bottom: 15px;
+}
+#contact #contact-box #contact-2 ul li i{
+    margin-right: 10px;
+    color: #777;
+}
+#contact #contact-box #contact-2 ul li .first{
+    transform: translate(0, 25%);
+    -ms-transform: translate(0, 25%);
+}
+#contact #contact-box #contact-3 ul{
+    list-style: none;
+}
+#contact #contact-box #contact-3 ul li{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #ddd;
+    position: relative;
+}
+#contact #contact-box #contact-3 ul i{
+    color: #999;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition: all .3s;
+}
+#contact #contact-box #contact-3 ul li:hover{
+    background-color: #267c43;
+}
+#contact #contact-box #contact-3 ul li:hover i{
+    color: #FFF;
+}
+/*----------------------------------------footer----------------------------------------*/
+footer{
+    margin: 20px auto;
+    text-align: center;
+    color: #aaa;
+}
+footer span{
+    color: #3cc66b;
+    font-weight: bold;
+}

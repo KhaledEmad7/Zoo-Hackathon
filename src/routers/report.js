@@ -20,7 +20,7 @@ router.post('/reports', async (req, res) => {
 
 router.get('/reports', async (req, res) =>{
     
-    try {
+    try {cd
         const ret = await Report.find({})
         res.send(ret)
     } catch(e){
