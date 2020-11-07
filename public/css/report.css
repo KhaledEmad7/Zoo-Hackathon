@@ -110,6 +110,7 @@ form{
     margin: 50px auto;
 }
 input[type=text],
+input[type=email],
 select,
 textarea {
   width: 100%;
@@ -119,6 +120,7 @@ textarea {
   resize: vertical;
 }
 input[type=number],
+input[type=tel],
 select,
 textarea {
   width: 100%;
@@ -148,6 +150,7 @@ form i{
     font-size: xx-large;
 }
 input[type=submit], button {
+
   background-color: #3cc66b;
   text-transform: uppercase;
   font-weight: bold;
