@@ -1,0 +1,10 @@
+header{
+    background: url('../imgs/African_Elephant.jpg') no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 400px;
+    position: relative;
+    text-align: center;
+}
