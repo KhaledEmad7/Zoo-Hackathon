@@ -27,5 +27,11 @@ submitForm.addEventListener('click', (e) => {
       }).then(res=>res.json())
         .then(res => console.log(res));
 
+    animal.value = ""
+    product.value = ""
+    sellerName.value = ""
+    sellerAddress.value = ""
+    description.value = ""
+
 });
 
