@@ -273,6 +273,10 @@ header svg{
     font-weight: 500;
     margin-bottom: 50px;
 }
+#travellino button  a{
+    text-decoration: none;
+    color: #FFF;
+}
 #travellino button:hover{
     background-color: #267c43;
 }
@@ -316,6 +320,10 @@ header svg{
 #blogs #blogs-box .blog p i{
     color: #3cc66b;
 }
+#blogs #blogs-box .blog button a{
+    text-decoration: none;
+    color: #FFF;
+}
 #blogs #blogs-box .blog button{
     color: #FFf;
     background-color: #3cc66b;
@@ -356,6 +364,10 @@ header svg{
     color: #FFF;
     font-size: 50px;
     font-weight: 400;
+}
+#back-1 #back-1-content a{
+    text-decoration: none;
+    color: #FFF;
 }
 #back-1 #back-1-content button{
     margin-top: 50px;
@@ -421,6 +433,10 @@ header svg{
     color: #FFF;
     font-size: 50px;
     font-weight: 400;
+}
+#back-2 #back-2-content a{
+    text-decoration: none;
+    color: #FFF;
 }
 #back-2 #back-2-content button{
     margin-top: 50px;
