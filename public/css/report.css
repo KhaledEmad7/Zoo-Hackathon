@@ -149,7 +149,8 @@ form i{
 .ix{
     font-size: xx-large;
 }
-input[type=submit],button {
+input[type=submit], button {
+
   background-color: #3cc66b;
   text-transform: uppercase;
   font-weight: bold;
@@ -163,7 +164,7 @@ input[type=submit],button {
 .submit-class{
     margin-top: 20px;
 }
-input[type=submit]:hover,button:hover {
+input[type=submit]:hover, button:hover {
   background-color: #267c43;
 }
 input[type=file] {
