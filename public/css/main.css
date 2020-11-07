@@ -30,8 +30,11 @@ nav{
 }
 nav #nav-logo{
     flex: 50%;
-    margin-top: 15px;
-    padding-left: 4%;
+    margin-top: 5px;
+    padding-left: 2%;
+}
+nav #nav-logo img{
+    width: 25%;
 }
 nav #nav-list{
     flex: 50%;
@@ -69,7 +72,7 @@ nav ul li a:hover::after{
 /*----------------------------------------header----------------------------------------*/
 header{
     background: url('../imgs/Cover.jpg') no-repeat center;
-    //background-size: cover;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -201,12 +204,6 @@ header svg{
 }
 /*----------------------------------------travellino----------------------------------------*/
 #travellino{
-    /*background: url('../imgs/travellino.jpg') no-repeat center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-height: 600px;*/
     text-align: center;
 }
 #travellino h1{
